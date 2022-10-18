@@ -1,3 +1,5 @@
+'use strict';
+
 window.addEventListener("DOMContentLoaded", () => {
   const tabs = document.querySelectorAll(".tabheader__item"),
     tabParent = document.querySelector(".tabheader__items"),
