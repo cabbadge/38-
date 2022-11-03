@@ -168,6 +168,7 @@ window.addEventListener("DOMContentLoaded", function () {
       }
 
       element.innerHTML = `
+
                 <img src=${this.src} alt=${this.alt}>
                 <h3 class="menu__item-subtitle">${this.title}</h3>
                 <div class="menu__item-descr">${this.descr}</div>
@@ -176,6 +177,7 @@ window.addEventListener("DOMContentLoaded", function () {
                     <div class="menu__item-cost">Цена:</div>
                     <div class="menu__item-total"><span>${this.price}</span> грн/день</div>
                 </div>
+
             `;
       this.parent.append(element);
     }
@@ -274,6 +276,7 @@ window.addEventListener("DOMContentLoaded", function () {
                 display: block;
                 margin: 0 auto;
             `;
+
       form.insertAdjacentElement("afterend", statusMessage);
 
       const formData = new FormData(form);
@@ -304,16 +307,19 @@ window.addEventListener("DOMContentLoaded", function () {
     const thanksModal = document.createElement("div");
     thanksModal.classList.add("modal__dialog");
     thanksModal.innerHTML = `
+
             <div class="modal__content">
                 <div class="modal__close" data-close>×</div>
                 <div class="modal__title">${message}</div>
             </div>
         `;
+
     document.querySelector(".modal").append(thanksModal);
     setTimeout(() => {
       thanksModal.remove();
       prevModalDialog.classList.add("show");
       prevModalDialog.classList.remove("hide");
+
       closeModal();
     }, 4000);
   }
