@@ -1,13 +1,22 @@
 // sliders
-function slider() {
-  const slides = document.querySelectorAll(".offer__slide"),
-    slider = document.querySelector(".offer__slider"),
-    prevSlide = document.querySelector(".offer__slider-prev"),
-    nextSlide = document.querySelector(".offer__slider-next"),
-    total = document.querySelector("#total"),
-    current = document.querySelector("#current"),
-    slidesWrapper = document.querySelector(".offer__slider-wrapper"),
-    sliderField = this.document.querySelector(".offer__slider-inner"),
+function slider({
+  container,
+  slide,
+  prev,
+  next,
+  totalCounter,
+  currentCounter,
+  wrapperSlide,
+  field,
+}) {
+  const slides = document.querySelectorAll(slide),
+    slider = document.querySelector(container),
+    prevSlide = document.querySelector(prev),
+    nextSlide = document.querySelector(next),
+    total = document.querySelector(totalCounter),
+    current = document.querySelector(currentCounter),
+    slidesWrapper = document.querySelector(wrapperSlide),
+    sliderField = document.querySelector(field),
     width = window.getComputedStyle(slidesWrapper).width;
   let slideIndex = 1;
   let offset = 0;
@@ -124,4 +133,4 @@ function slider() {
     });
   });
 }
-module.exports = slider;
+export default slider;
